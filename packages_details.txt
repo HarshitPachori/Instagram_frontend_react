@@ -1,7 +1,0 @@
-formik  -> form validation
-yup   -> validation
-redux -> state management
-react-redux  -> 
-react-icons ->
-react-router-dom -> 
-redux-thunk -> 
