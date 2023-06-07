@@ -12,7 +12,7 @@ const ProfileUserDetails = () => {
             alt=""
           />
         </div>
-        <div>
+        <div className="space-y-5">
           <div className="flex space-x-10 items-center">
             <p>Username</p>
             <button className="bg-sky-500 rounded-md px-2 my-1 text-white">
@@ -37,9 +37,9 @@ const ProfileUserDetails = () => {
             </div>
           </div>
           <div>
-            <p className="font-semibold ">fullname</p>
-            <p>
-              <span className="font-semibold ">Bio</span> <br />
+            <p className="font-semibold ">Full Name</p>
+            <span className="font-semibold ">Bio</span> <br />
+            <p className="font-thin text-sm">
               💻 Web Developer | 🔟 🎉 July 🎂 | Photoholic 📷 | Music 🎧
               Lover🎵
             </p>
