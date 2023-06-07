@@ -26,8 +26,9 @@ const Sidebar = () => {
             />
           </div>
           <div className="mt-10">
-            {menu.map((menuItem) => (
+            {menu.map((menuItem, i) => (
               <div
+                key={i}
                 onClick={() => handleTabClick(menuItem.title)}
                 className="flex items-center mb-5 cursor-pointer text-lg"
               >
