@@ -13,7 +13,7 @@ const CommentModal = ({ onClose, isOpen }) => {
               <div className="w-[45%] flex flex-col justify-center">
                 <img
                   className="max-h-full w-full"
-                  src="https://cdn.pixabay.com/photo/2023/05/23/11/47/australian-wood-ducks-8012590__340.jpg"
+                  src="https://cdn.pixabay.com/photo/2023/05/30/15/42/stone-face-8028981_640.jpg"
                   alt=""
                 />
               </div>
@@ -22,7 +22,7 @@ const CommentModal = ({ onClose, isOpen }) => {
                   <div className="flex items-center">
                     <div>
                       <img
-                        className="w-9 h-9 rounded-full"
+                        className="w-10 h-10 rounded-full"
                         src="https://cdn.pixabay.com/photo/2023/06/01/06/22/british-shorthair-8032816_640.jpg"
                         alt=""
                       />
