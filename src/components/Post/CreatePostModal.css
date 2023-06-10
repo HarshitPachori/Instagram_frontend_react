@@ -1,0 +1,29 @@
+.drag-drop {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  font-size: 1.2rem;
+  color: #999;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.drag-drop p {
+  margin: 0 0 1rem;
+}
+.customFileUpload {
+  padding: 0.5rem;
+  font-weight: 600;
+  background-color: #3897f0;
+  color: #fff;
+  border: 1px solid #3897f0;
+  cursor: pointer;
+}
+.customFileUpload:hover {
+  background-color: #2684f0;
+  border-color: #2684f0;
+}
+input[type="file"] {
+  display: none;
+}
