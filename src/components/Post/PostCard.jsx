@@ -10,11 +10,13 @@ import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
 import { FaRegComment } from "react-icons/fa";
 import { RiSendPlaneLine } from "react-icons/ri";
 import CommentModal from "../Comment/CommentModal";
+import { useDisclosure } from "@chakra-ui/react";
 
 const PostCard = () => {
   const [showDropDown, setshowDropDown] = useState(false);
   const [isPostLiked, setisPostLiked] = useState(false);
   const [isPostBookmark, setisPostBookmark] = useState(false);
+  const { isOpen, onOpen, onClose } = useDisclosure();
   const handleClick = () => {
     setshowDropDown(!showDropDown);
   };
@@ -23,6 +25,9 @@ const PostCard = () => {
   };
   const handlePostBookmarked = () => {
     setisPostBookmark(!isPostBookmark);
+  };
+  const handleOpenCommentModal = () => {
+    onOpen();
   };
   return (
     <div>
@@ -57,7 +62,7 @@ const PostCard = () => {
             alt=""
           />
         </div>
-        <div className="flex justify-between items-center w-full px-5 py-4">
+        <div className="flex justify-between items-center w-full  py-4">
           <div className="flex items-center space-x-2">
             {isPostLiked ? (
               <span>
@@ -75,7 +80,7 @@ const PostCard = () => {
               </span>
             )}
             <span className="text-xl hover:opacity-50 cursor-pointer">
-              <FaRegComment />
+              <FaRegComment onClick={handleOpenCommentModal} />
             </span>
             <span className="text-2xl hover:opacity-50 cursor-pointer">
               <RiSendPlaneLine />
@@ -111,7 +116,14 @@ const PostCard = () => {
             />
           </div>
         </div>
-        <CommentModal />
+        <CommentModal
+          isPostLiked={isPostLiked}
+          isPostBookmark={isPostBookmark}
+          handlePostLiked={handlePostLiked}
+          handlePostBookmarked={handlePostBookmarked}
+          onClose={onClose}
+          isOpen={isOpen}
+        />
       </div>
     </div>
   );
